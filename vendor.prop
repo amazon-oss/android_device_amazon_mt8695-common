@@ -1,2 +1,5 @@
+# Fastbootd
+ro.fastbootd.available=true
+
 # Recovery
 ro.recovery.batteryless=true

@@ -19,6 +19,10 @@ PRODUCT_SOONG_NAMESPACES += \
     bootable/deprecated-ota
 endif
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.batteryless \
