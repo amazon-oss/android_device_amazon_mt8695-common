@@ -44,6 +44,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 # Kernel
