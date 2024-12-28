@@ -31,6 +31,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/lib/hw/keystore.mt8695.so'): blob_fixup()
+        .add_needed('libkeymaster_messages_shim.so'),
     ('vendor/lib/libkmsetkey.so'): blob_fixup()
         .add_needed('libutils.so'),
 }  # fmt: skip
@@ -38,6 +40,7 @@ blob_fixups: blob_fixups_user_type = {
 module = ExtractUtilsModule(
     'mt8695-common',
     'amazon',
+    blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
 )
 

@@ -68,6 +68,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/etc/init.recovery.mt8695.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt8695.rc
 
+# Shims
+PRODUCT_PACKAGES += \
+    libkeymaster_messages_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
