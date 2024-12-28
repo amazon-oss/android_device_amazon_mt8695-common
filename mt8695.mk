@@ -14,6 +14,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # A/B
 AB_OTA_UPDATER := false
 
+ifneq ($(AB_OTA_UPDATER), true)
+PRODUCT_SOONG_NAMESPACES += \
+    bootable/deprecated-ota
+endif
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.batteryless \
