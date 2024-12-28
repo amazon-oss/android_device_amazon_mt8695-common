@@ -58,6 +58,46 @@ vendor/lib/libtqvalidate.so
 vendor/lib/libufwriter.so
 vendor/lib/libusc.so
 
+# DRM
+vendor/bin/amzn_dha_hmac
+vendor/bin/amzn_dha_tool
+vendor/bin/amzn_drmprov_check
+vendor/bin/amzn_drmprov_tool
+vendor/bin/amzn_xo_tool
+vendor/bin/hw/android.hardware.drm@1.1-service.fairplay
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/bin/hw/fireos.hardware.drmprov@1.0-service
+vendor/bin/hw/fireos.hardware.fireosdha@1.0-service
+vendor/bin/kisd
+vendor/bin/pr_device_cert_id
+vendor/bin/rpmb_svc
+vendor/bin/securetime
+vendor/etc/init/amzn_drmprov_check.rc
+vendor/etc/init/amzn_xo_tool.rc
+vendor/etc/init/android.hardware.drm@1.1-service.fairplay.rc
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/etc/init/fireos.hardware.drmprov@1.0-service.rc
+vendor/etc/init/fireos.hardware.fireosdha@1.0-service.rc
+vendor/etc/init/kisd.rc
+vendor/etc/init/pr_device_cert_id.rc
+vendor/etc/init/rpmb_svc.rc
+vendor/etc/init/securetime.rc
+vendor/lib/fireos.hardware.drmprov@1.0.so
+vendor/lib/fireos.hardware.fireosdha@1.0.so
+vendor/lib/hw/amzn_dha.mt8695.so
+vendor/lib/hw/amzn_drmprov.mt8695.so
+vendor/lib/hw/fireos.hardware.drmprov@1.0-impl.so
+vendor/lib/hw/fireos.hardware.fireosdha@1.0-impl.so
+vendor/lib/libfpsplugin.so
+vendor/lib/libFPS.so
+vendor/lib/liboemcrypto.so
+vendor/lib/libTAFps.so
+vendor/lib/liburee_fps.so
+vendor/lib/liburee_meta_drmkeyinstall_v2.so
+vendor/lib/lib_uree_mtk_modular_drm.so
+vendor/lib/lib_uree_mtk_video_secure_al.so
+vendor/lib/libwvhidl.so
+
 # HDMI
 vendor/bin/hw/fireos.hardware.hdcp@1.0-service
 vendor/bin/hw/fireos.hardware.hdmitxinfo@1.0-service

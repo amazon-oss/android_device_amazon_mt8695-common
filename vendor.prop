@@ -7,6 +7,11 @@ ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 debug.sf.disable_backpressure=1
 ro.vendor.dpframework.not_support_yv12=1
 
+# DRM
+drm.service.enabled=true
+ro.amzn_drm.pr3_file=/data/vendor/playready/AIVDrmStore
+ro.vendor.mtk_widevine_drm_l1_support=1
+
 # Fastbootd
 ro.fastbootd.available=true
 

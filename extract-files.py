@@ -32,6 +32,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/bin/hw/android.hardware.drm@1.1-service.widevine'): blob_fixup()
+        .add_needed('libhidlbase-v32.so'),
     ('vendor/lib/hw/fireos.hardware.audio@4.0-impl.so'): blob_fixup()
         .replace_needed('android.hardware.audio.common@4.0-util.so', 'android.hardware.audio.common@4.0-util-v28.so')
         .replace_needed('libutils.so', 'libutils-v32.so'),
@@ -45,6 +47,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libutils.so'),
     ('vendor/lib/libmtklimiter_vendor.so'): blob_fixup()
         .add_needed('liblog.so'),
+    ('vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so', 'vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so', 'vendor/lib/fireos.hardware.fireosdha@1.0.so', 'vendor/lib/fireos.hardware.drmprov@1.0.so'): blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
     ('vendor/lib/vendor.mediatek.hardware.hdmi@1.0.so', 'vendor/lib/vendor.mediatek.hardware.hdmi@1.1.so', 'vendor/lib/fireos.hardware.hdmitxinfo@1.0.so', 'vendor/lib/fireos.hardware.hdcp@1.0.so', 'vendor/lib/vendor.mediatek.hardware.keymanage@1.0.so'): blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
 }  # fmt: skip
@@ -52,6 +56,7 @@ blob_fixups: blob_fixups_user_type = {
 module = ExtractUtilsModule(
     'mt8695-common',
     'amazon',
+    lib_fixups=lib_fixups,
     blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
 )
