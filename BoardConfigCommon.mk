@@ -47,5 +47,8 @@ BOARD_HAS_MTK_HARDWARE := true
 BOARD_VENDOR := amazon
 TARGET_BOARD_PLATFORM := mt8695
 
+# Verified Boot
+BOARD_AVB_ENABLE := false
+
 # Inherit the proprietary files
 -include vendor/amazon/mt8695-common/BoardConfigVendor.mk
