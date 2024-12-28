@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# A/B
+AB_OTA_UPDATER := false
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.batteryless \
