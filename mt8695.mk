@@ -5,6 +5,9 @@
 
 COMMON_PATH := device/amazon/mt8695-common
 
+# Disable A/B target features
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
