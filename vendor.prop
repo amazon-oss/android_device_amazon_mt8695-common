@@ -5,5 +5,9 @@ ro.vendor.dpframework.not_support_yv12=1
 # Fastbootd
 ro.fastbootd.available=true
 
+# Keymaster
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.vendor.mtk_in_house_tee_support=true
+
 # Recovery
 ro.recovery.batteryless=true

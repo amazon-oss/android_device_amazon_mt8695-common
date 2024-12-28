@@ -30,6 +30,11 @@ namespace_imports = [
     'device/amazon/mt8695-common',
 ]
 
+blob_fixups: blob_fixups_user_type = {
+    ('vendor/lib/libkmsetkey.so'): blob_fixup()
+        .add_needed('libutils.so'),
+}  # fmt: skip
+
 module = ExtractUtilsModule(
     'mt8695-common',
     'amazon',

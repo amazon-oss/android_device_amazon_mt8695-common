@@ -44,6 +44,16 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.batteryless \
     android.hardware.health-service.batteryless_recovery
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-service \
+    android.hardware.keymaster@3.0-impl \
+    libkeystore-engine-wifi-hidl \
+    libkeystore-wifi-hidl
+
+PRODUCT_PACKAGES += \
+    libkeymaster3device.vendor
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.mt8695.rc \

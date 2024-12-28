@@ -30,5 +30,12 @@ vendor/lib/libtqvalidate.so
 vendor/lib/libufwriter.so
 vendor/lib/libusc.so
 
+# Keymaster
+vendor/lib/hw/keystore.mt8695.so
+vendor/lib/libkmsetkey.so
+vendor/lib/libtz_uree.so
+vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
+vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
+
 # Ladder - from ares-user 13 TP1A.220624.014 V14.0.2.0.TKJCNXM release-keys
 vendor/lib/libladder.so|ab3c533149a4e7706e9027b1a0fe72fc12bfdf24
