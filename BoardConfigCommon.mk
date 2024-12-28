@@ -32,6 +32,16 @@ BOARD_MKBOOTIMG_ARGS += --board ""
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Kernel
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin
+TARGET_KERNEL_ARCH := arm
+TARGET_KERNEL_HEADER_ARCH := arm
+TARGET_KERNEL_SOURCE := kernel/amazon/mt8695
+TARGET_KERNEL_CONFIG := mt8695_defconfig amazon/$(PRODUCT_DEVICE).config
+TARGET_KERNEL_CLANG_COMPILE := false
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+
 # Platform
 BOARD_HAS_MTK_HARDWARE := true
 BOARD_VENDOR := amazon
