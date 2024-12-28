@@ -1,0 +1,52 @@
+//
+// SPDX-FileCopyrightText: 2024 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.nvdata.rc",
+    src: "etc/init.nvdata.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.project.rc",
+    src: "etc/init.project.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt8695.rc",
+    src: "etc/init.mt8695.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.mt8695.usb.rc",
+    src: "etc/init.mt8695.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.connectivity.rc",
+    src: "etc/init.connectivity.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.mt8695",
+    src: "etc/fstab.mt8695",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.mt8695.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.mt8695.rc",
+    vendor: true,
+}

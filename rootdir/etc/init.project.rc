@@ -1,0 +1,95 @@
+on early-boot
+    start usb_cp_type
+
+# P2P
+on property:wlan.interface.p2p.group=*
+    start ozwpan
+
+on init
+    # Dynamic boost
+    chmod 0660 /sys/devices/platform/dynamic_boost/dynamic_boost
+    chown system system /sys/devices/platform/dynamic_boost/dynamic_boost
+
+    # Disable suspend
+    write /sys/power/wake_lock disablesuspend
+
+on post-fs-data
+    # DRM
+    start amzn_drmprov
+
+    # Bluetooth
+    insmod /vendor/lib/modules/btmtksdio.ko
+
+    # SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    # Define device for ATCID
+    chmod 660 /dev/ttyGS0
+    chown system /dev/ttyGS0
+    chmod 660 /dev/ttyGS1
+    chown system /dev/ttyGS1
+
+    # Prealloc memory for wlan driver
+    insmod /vendor/lib/modules/wlan_mt76x3_sdio_prealloc.ko
+
+    # WLAN driver
+    insmod /vendor/lib/modules/wlan_mt76x3_sdio.ko
+
+    # Audio system init
+    start audio_sys_init
+
+service audio_sys_init /vendor/bin/audio_sys_init.sh
+    disabled
+    user root
+    oneshot
+
+on property:dev.bootcomplete=1
+    write /proc/sys/vm/swappiness 100
+
+# USB
+service usb_cp_type /system/bin/amzn_usb_cp_type.sh
+    disabled
+    user root
+    oneshot
+
+service ozwpan /vendor/bin/ozwpan.sh
+    disabled
+    oneshot
+    user root
+
+service amzn_drmprov /system/bin/amzn_drmprov_check
+    class main
+    user root
+    group system drmrpc
+    oneshot
+    disabled
+
+service wipe_fosflags /vendor/etc/init.fosflags.sh wipe
+    class core
+    oneshot
+    disabled
+
+service backup_drms /vendor/bin/amzn_drmprov_tool --backup
+    class main
+    user root
+    group system drmrpc
+    oneshot
+    disabled
+
+on property:amazon.fos_flags.wipe=1
+    start backup_drms
+    start wipe_fosflags
+
+on property:sys.boot_completed=1
+    # KSM
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/run 1
+
+# The following change requires that the corresponding change be made in the
+# device's system.prop file, and is required because "ip_local_reserved_ports"
+# is too long. Additional ephemeral port reservations should be added to the
+# ip_loc_res_ports var in the system.prop
+on property:sys.sysctl.ip_loc_res_ports=*
+    write /proc/sys/net/ipv4/ip_local_reserved_ports ${sys.sysctl.ip_loc_res_ports}

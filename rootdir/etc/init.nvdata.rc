@@ -1,0 +1,8 @@
+on post-fs-data
+    # Create basic filesystem structure
+    chown root system /mnt/vendor/nvdata
+    chmod 2771 /mnt/vendor/nvdata
+    mkdir /mnt/vendor/nvdata/media 0771 media audio
+
+    # Set SELinux security contexts on upgrade or policy update.
+    restorecon_recursive /mnt/vendor/nvdata

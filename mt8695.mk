@@ -9,6 +9,15 @@ COMMON_PATH := device/amazon/mt8695-common
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
 # Rootdir
+PRODUCT_PACKAGES += \
+    init.mt8695.rc \
+    init.mt8695.usb.rc \
+    init.connectivity.rc \
+    init.project.rc \
+    init.nvdata.rc \
+    fstab.mt8695 \
+    ueventd.mt8695.rc
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/etc/init.recovery.mt8695.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt8695.rc
 
