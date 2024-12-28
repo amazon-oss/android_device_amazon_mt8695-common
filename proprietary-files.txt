@@ -58,6 +58,26 @@ vendor/lib/libtqvalidate.so
 vendor/lib/libufwriter.so
 vendor/lib/libusc.so
 
+# HDMI
+vendor/bin/hw/fireos.hardware.hdcp@1.0-service
+vendor/bin/hw/fireos.hardware.hdmitxinfo@1.0-service
+vendor/bin/hw/vendor.mediatek.hardware.hdmi@1.1-service
+vendor/bin/hw/vendor.mediatek.hardware.keymanage@1.0-service
+vendor/etc/init/fireos.hardware.hdcp@1.0-service.rc
+vendor/etc/init/fireos.hardware.hdmitxinfo@1.0-service.rc
+vendor/etc/init/vendor.mediatek.hardware.hdmi@1.1-service.rc
+vendor/etc/init/vendor.mediatek.hardware.keymanage@1.0-service.rc
+vendor/lib/fireos.hardware.hdcp@1.0.so
+vendor/lib/fireos.hardware.hdmitxinfo@1.0.so
+vendor/lib/hw/fireos.hardware.hdmitxinfo@1.0-impl.so
+vendor/lib/hw/hdmi_cec.mt8695.so
+vendor/lib/hw/vendor.mediatek.hardware.hdmi@1.1-impl.so
+vendor/lib/hw/vendor.mediatek.hardware.keymanage@1.0-impl.so
+vendor/lib/libhdcprx.so
+vendor/lib/vendor.mediatek.hardware.hdmi@1.0.so
+vendor/lib/vendor.mediatek.hardware.hdmi@1.1.so
+vendor/lib/vendor.mediatek.hardware.keymanage@1.0.so
+
 # Keymaster
 vendor/lib/hw/keystore.mt8695.so
 vendor/lib/libkmsetkey.so

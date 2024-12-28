@@ -35,8 +35,33 @@
         <fqname>@3.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.tv.cec</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IHdmiCec/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>fireos.hardware.audio</name>
         <transport>hwbinder</transport>
         <fqname>@4.0::IDevicesFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>fireos.hardware.hdcp</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IAmazonHdcp/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>fireos.hardware.hdmitxinfo</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IHdmiTxInfo/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.hdmi</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.1::IMtkHdmiService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.keymanage</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IKeymanage/default</fqname>
     </hal>
 </manifest>

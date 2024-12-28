@@ -90,6 +90,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.batteryless \
     android.hardware.health-service.batteryless_recovery
 
+# HDMI
+PRODUCT_SUPPORTS_TUNER := false
+PRODUCT_PACKAGES += \
+    android.hardware.tv.cec@1.0-impl \
+    android.hardware.tv.cec@1.0-service
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service \

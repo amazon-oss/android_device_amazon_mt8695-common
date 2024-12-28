@@ -10,6 +10,12 @@ ro.vendor.dpframework.not_support_yv12=1
 # Fastbootd
 ro.fastbootd.available=true
 
+# HDMI
+persist.sys.hdmi.keep_awake=false
+ro.hdmi.wake_on_hotplug=false
+ro.hdmi.device_type=4
+ro.vendor.mtk_tb_hdmi=internal,hidl,1080plimit
+
 # Keymaster
 ro.crypto.volume.filenames_mode=aes-256-cts
 ro.vendor.mtk_in_house_tee_support=true

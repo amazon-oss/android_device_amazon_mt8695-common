@@ -45,6 +45,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libutils.so'),
     ('vendor/lib/libmtklimiter_vendor.so'): blob_fixup()
         .add_needed('liblog.so'),
+    ('vendor/lib/vendor.mediatek.hardware.hdmi@1.0.so', 'vendor/lib/vendor.mediatek.hardware.hdmi@1.1.so', 'vendor/lib/fireos.hardware.hdmitxinfo@1.0.so', 'vendor/lib/fireos.hardware.hdcp@1.0.so', 'vendor/lib/vendor.mediatek.hardware.keymanage@1.0.so'): blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
