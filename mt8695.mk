@@ -8,6 +8,11 @@ COMMON_PATH := device/amazon/mt8695-common
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.batteryless \
+    android.hardware.health-service.batteryless_recovery
+
 # Rootdir
 PRODUCT_PACKAGES += \
     init.mt8695.rc \
