@@ -69,6 +69,9 @@ TARGET_BOARD_PLATFORM := mt8695
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.mt8695
 
+# Screen
+TARGET_SCREEN_DENSITY := 320
+
 # Verified Boot
 BOARD_AVB_ENABLE := false
 
