@@ -1,3 +1,8 @@
+# Audio
+audio.offload.min.duration.secs=1
+audio.offload.video=true
+ro.vendor.mtk_audio_tuning_tool_ver=V2.2
+
 # Display
 debug.sf.disable_backpressure=1
 ro.vendor.dpframework.not_support_yv12=1

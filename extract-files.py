@@ -27,14 +27,24 @@ from extract_utils.utils import (
 )
 
 namespace_imports = [
+    'hardware/amazon',
     'device/amazon/mt8695-common',
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/lib/hw/fireos.hardware.audio@4.0-impl.so'): blob_fixup()
+        .replace_needed('android.hardware.audio.common@4.0-util.so', 'android.hardware.audio.common@4.0-util-v28.so')
+        .replace_needed('libutils.so', 'libutils-v32.so'),
+    ('vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so'): blob_fixup()
+        .replace_needed('android.hardware.audio.common@4.0-util.so', 'android.hardware.audio.common@4.0-util-v28.so'),
     ('vendor/lib/hw/keystore.mt8695.so'): blob_fixup()
         .add_needed('libkeymaster_messages_shim.so'),
+    ('vendor/lib/fireos.hardware.audiosignalprocessor@1.0.so', 'vendor/lib/fireos.hardware.audiosignalprocessor@1.1.so', 'vendor/lib/fireos.hardware.audio@2.0.so', 'vendor/lib/fireos.hardware.audio@4.0.so'): blob_fixup()
+        .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
     ('vendor/lib/libkmsetkey.so'): blob_fixup()
         .add_needed('libutils.so'),
+    ('vendor/lib/libmtklimiter_vendor.so'): blob_fixup()
+        .add_needed('liblog.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

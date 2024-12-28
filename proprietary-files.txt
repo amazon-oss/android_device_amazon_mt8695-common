@@ -1,5 +1,33 @@
 # Unpinned blobs from sheldon-user 9 PS7669.4007N 0029696698112 amz-p,release-keys
 
+# Audio
+vendor/lib/fireos.hardware.audio@2.0.so
+vendor/lib/fireos.hardware.audio@4.0.so
+vendor/lib/fireos.hardware.audiosignalprocessor@1.0.so
+vendor/lib/fireos.hardware.audiosignalprocessor@1.1.so
+vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
+vendor/lib/hw/audio.btle.default.so
+vendor/lib/hw/audio.primary.mt8695.so
+vendor/lib/hw/audio.r_submix.mt8695.so
+vendor/lib/hw/fireos.hardware.audio@4.0-impl.so
+vendor/lib/libaudiocomponentengine_vendor.so
+vendor/lib/libaudiohalopen_vendor.so
+vendor/lib/libaudiohwsyncbridge.so
+vendor/lib/libaudiomixer.so
+vendor/lib/libaudioresampler.so
+vendor/lib/libblisrc32_vendor.so
+vendor/lib/libbwc.so
+vendor/lib/libcommon_time_client_vendor.so
+vendor/lib/liblatencybenchmarker_interface.so
+vendor/lib/liblatencybenchmarker_vendor.so
+vendor/lib/liblineartransform_vendor.so
+vendor/lib/libmediaextension_vendor.so
+vendor/lib/libmtkaudiospdif.so
+vendor/lib/libmtklimiter_vendor.so
+vendor/lib/libmtkshifter_vendor.so
+vendor/lib/libopuscodec.so
+vendor/lib/libvendoraudiospdif.so
+
 # Display
 vendor/firmware/rgx.fw.signed
 vendor/lib/egl/libEGL_POWERVR_ROGUE.so

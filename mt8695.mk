@@ -22,6 +22,52 @@ PRODUCT_SOONG_NAMESPACES += \
     bootable/deprecated-ota
 endif
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default \
+    audio.usb.default \
+    audio.r_submix.default
+
+PRODUCT_PACKAGES += \
+    fireos.hardware.audio.service
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.soundtrigger@2.1-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio.common@4.0-util-v28
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0.vendor \
+    android.hardware.audio@4.0.vendor \
+    android.hardware.audio.effect@2.0.vendor \
+    android.hardware.audio.effect@4.0.vendor \
+    android.hardware.soundtrigger@2.0.vendor
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_PACKAGES += \
+    libalsautils \
+    libamazonlog \
+    libaudiopreprocessing \
+    libnbaio_mono \
+    libtinycompress \
+    libtinyxml
+
+PRODUCT_PACKAGES += \
+    libutils-v32 \
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/stub_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/stub_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
@@ -77,6 +123,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/amazon \
     hardware/mediatek
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libhidlbase-v32
 
 # Inherit the proprietary files
 $(call inherit-product-if-exists, vendor/amazon/mt8695-common/mt8695-common-vendor.mk)
