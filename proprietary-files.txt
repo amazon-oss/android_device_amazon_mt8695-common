@@ -1,1 +1,32 @@
-#
+# Unpinned blobs from sheldon-user 9 PS7669.4007N 0029696698112 amz-p,release-keys
+
+# Display
+vendor/firmware/rgx.fw.signed
+vendor/lib/egl/libEGL_POWERVR_ROGUE.so
+vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so
+vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so
+vendor/lib/hw/gralloc.mt8695.so;FIX_SONAME
+vendor/lib/hw/hwcomposer.mt8695.so
+vendor/lib/hw/memtrack.mt8695.so
+vendor/lib/hw/vulkan.mt8695.so;FIX_SONAME
+vendor/lib/libIMGegl.so
+vendor/lib/libOpenCL.so
+vendor/lib/libPVROCL.so
+vendor/lib/libPVRScopeServices.so
+vendor/lib/libavsync.so
+vendor/lib/libdpframework.so
+vendor/lib/libglslcompiler.so
+vendor/lib/libgralloc_extra.so
+vendor/lib/libion_mtk.so
+vendor/lib/libion_ulit.so
+vendor/lib/libladder.so
+vendor/lib/libm4u.so
+vendor/lib/libmemtrack_GL.so
+vendor/lib/libmtk_drvb.so
+vendor/lib/libmtk_eglx.so
+vendor/lib/libmtk_gralloc_common.so
+vendor/lib/libmtkbufferqueue.so
+vendor/lib/libsrv_um.so
+vendor/lib/libtqvalidate.so
+vendor/lib/libufwriter.so
+vendor/lib/libusc.so

@@ -35,6 +35,9 @@ BOARD_MKBOOTIMG_ARGS += --board ""
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
+# Display
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x00000200
+
 # Filesystems
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE   := ext4
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE    := ext4
@@ -47,6 +50,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/amazon/vintf/amazon_framework_compatibility_matrix.xml \
     hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb

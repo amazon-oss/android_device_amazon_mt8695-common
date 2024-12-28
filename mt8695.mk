@@ -22,6 +22,18 @@ PRODUCT_SOONG_NAMESPACES += \
     bootable/deprecated-ota
 endif
 
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0-impl
+
+PRODUCT_PACKAGES += \
+    libdrm.vendor
+
 # Fastboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
