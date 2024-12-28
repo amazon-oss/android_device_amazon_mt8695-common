@@ -42,6 +42,7 @@ prebuilt_etc {
     name: "fstab.mt8695",
     src: "etc/fstab.mt8695",
     vendor: true,
+    ramdisk_available: true,
 }
 
 prebuilt_etc {

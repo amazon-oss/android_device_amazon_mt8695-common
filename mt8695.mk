@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
     init.project.rc \
     init.nvdata.rc \
     fstab.mt8695 \
+    fstab.mt8695.ramdisk \
     ueventd.mt8695.rc
 
 PRODUCT_COPY_FILES += \
