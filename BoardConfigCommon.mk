@@ -66,6 +66,9 @@ BOARD_HAS_MTK_HARDWARE := true
 BOARD_VENDOR := amazon
 TARGET_BOARD_PLATFORM := mt8695
 
+# Properties
+TARGET_VENDOR_PROP := $(COMMON_PATH)/vendor.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.mt8695
 
